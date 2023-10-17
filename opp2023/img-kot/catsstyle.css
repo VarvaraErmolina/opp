@@ -1,0 +1,22 @@
+figure {
+  background-color:#CFB9FE;
+  text-align:center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 500px;
+  }
+figcaption {
+  border: 5px;
+  text-shadow: 2px 2px 5px black;
+  font-size:42px;
+}
+p{
+   text-align:left;
+   padding-left: 80px;
+   font-size:40px;
+}
+body {
+    background-image: url("bg.jpg");
+    background-size: 40%;
+    background-repeat: repeat;
+}

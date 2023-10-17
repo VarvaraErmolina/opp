@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Анкета посетителя ресторана</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Анкета посетителя ресторана</h1>
+    <form>
+      <fieldset>
+        <legend>Контактная информация</legend>
+          <div>
+            <label>Имя</label>
+            <input type="text" id="name">
+          </div>
+          <div>
+            <label>Телефон</label>
+            <input type="text">
+          </div>
+          <div>
+            <label>Email</label>
+            <input type="email">
+          </div>
+          <div>
+            <label class="data__label">Дата посещения</label>
+            <input type="date">
+          </div>
+      </fieldset>
+      <fieldset>
+        <legend>Персональная информация</legend>
+          <div>
+            <label>Возраст</label>
+            <input type="number" min="1" max="100" step="1">
+          </div>
+          <div>
+            <label>Любимая кухня</label>
+            <select>
+              <option>Русская</option>
+              <option>Итальянская</option>
+              <option>Китайская</option>
+              <option>Японская</option>
+              <option>Французская</option>
+            </select>
+          </div>
+          <div>
+            <label>Какие блюда Вы хотели бы увидеть в меню?</label>
+            <textarea></textarea>
+          </div>
+      </fieldset>
+      <fieldset>
+        <legend>Оценка нашего заведения</legend>
+        <h5>Почему Вы выбрали наше заведение?</h5>
+        <div class="radio-button-container__div">
+          <div>
+            <input type="radio">
+            <span>Недалеко от дома/работы</span>
+          </div>
+          <div>
+            <input type="radio">
+            <span>Увидел рекламу</span>
+          </div>
+          <div>
+            <input type="radio">
+            <span>Посоветовали</span>
+          </div>
+          <div>
+            <input type="radio">
+            <span>Оптимальное соотношение цены и качества</span>
+          </div>
+        </div>
+        <h5 class="title-container__h5">Вы будете рекомендовать наше заведение своим знакомым?</h5>
+        <div class="radio-button-container__div">
+          <div>
+            <input type="radio">
+            <span>Да</span>
+          </div>
+          <div>
+            <input type="radio">
+            <span>Нет</span>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Какую сумму вы потратили?</legend>
+        <div class="radio-button-container__div">
+          <div>
+            <input type="radio" id="more">
+            <span>Больше 1000 р.</span>
+          </div>
+          <div>
+            <input type="radio" id="less">
+            <span>Меньше 1000 р.</span>
+          </div>
+        </div>
+      </fieldset>
+      <button id="submit" type="submit">Отправить</button>
+    </form>
+    <h3 class="fin"></h3>
+    <p class="name"></p>
+    <p class="check"></p>
+<script>
+const check = document.querySelector('.check');
+const name = document.querySelector('.name');
+const fin = document.querySelector('.fin');
+const button = document.getElementById("submit");
+function addInfo(event) {
+event.preventDefault()
+fin.innerText = 'Итог'
+if (document.getElementById('more').checked) {
+  check.textContent = 'Чек: ' + '>1000 р.'
+} else if(document.getElementById('less').checked) {
+  check.textContent = 'Чек: ' + '<1000 р.'
+}
+name.textContent = "Имя: " + document.getElementById('name').value;
+}
+button.addEventListener("click", addInfo)
+</script>
+</body>
+</html>

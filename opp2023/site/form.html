@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Запись на мастер-классы</title>
+</head>
+<body>
+<ul id="navbar_ul">
+    <li class="navbar"><a href="site.html">Главная</a></li>
+  <li class="navbar"><a href="gallery.html">Галерея изделий</a></li>
+  <li class="navbar"><a href="price.html">Цены</a></li>
+  <li class="navbar"><a href="form.html" class="active">Запись на мастер-классы</a></li>
+  <li class="navbar"><a href="info.html">Контакты</a></li>
+</ul>
+
+<form>
+    <fieldset>
+    <legend>Запись на мастер-класс</legend>
+          <div>
+            <label>Выберите мастер-класс:</label>
+            <select>
+                <option>Изготовление тарелки</option>
+                <option>Изготовление кружки</option>
+                <option>Изготовление вазы</option>
+                <option>Изготовление формовой свечи</option>
+                <option>Изготовление свечи в ёмкости</option>
+                <option>Изготовление свечи в технике окунания</option>
+                <option>Роспись по дереву</option>
+                <option>Роспись керамики</option>
+                <option>Роспись по ткани</option>
+            </select>
+          </div>
+         <div>
+            <label class="data__label">Дата мастер-класса:</label>
+            <input type="date">
+          </div>
+        <div class="radio-button-container__div">
+            <label>Выберите количество людей в компании:</label>
+          <div>
+            <input type="radio">
+            <span>1</span>
+          </div>
+          <div>
+            <input type="radio">
+            <span>2-5</span>
+          </div>
+          <div>
+            <input type="radio">
+            <span>>5</span>
+          </div>
+        </div>
+        <div>
+            <label>Выберите студии, в которых вы можете посетить мастер-класс:</label>
+         <div class="checkbox-button-container__div">
+          <div>
+            <input type="checkbox">
+            <span>Цветной бул., 28, стр. 1</span>
+          </div>
+          <div>
+            <input type="checkbox">
+            <span>Лаврушинский пер., 10, стр. 4</span>
+          </div>
+          <div>
+            <input type="checkbox">
+            <span>Староваганьковский пер., 19, стр. 2</span>
+          </div>
+         </div>
+        </div>
+        <div>
+            <label>Если у вас есть промокод/сертификат, введите его:</label>
+            <div>
+            <input type="password">
+            </div>
+        </div>
+        <div>
+            <label>Место для ваших комментариев и пожеланий:</label>
+            <div>
+            <textarea></textarea>
+            </div>
+        </div>
+        <div>
+            <input type="hidden" value="Секретные данные">
+        </div>
+        <button id="submit" type="submit">Отправить</button>
+      </fieldset>
+</form>
+
+<div>Остались вопросы? Оставьте свои контактные данные, и мы с вами свяжемся!</div>
+
+<form>
+      <fieldset>
+        <legend>Ваша контактная информация</legend>
+          <div>
+            <label>Имя:</label>
+            <input type="text">
+          </div>
+          <div>
+            <label>Фамилия:</label>
+            <input type="text">
+          </div>
+          <div>
+            <label>Телефон:</label>
+            <input type="tel">
+          </div>
+          <div>
+            <label>E-mail:</label>
+            <input type="email">
+          </div>
+          <button id="submit_info" type="submit">Отправить</button>
+      </fieldset>
+</form>
+
+</body>
+</html>

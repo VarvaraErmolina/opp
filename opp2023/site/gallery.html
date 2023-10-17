@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+  	<link rel="stylesheet" href="gallery.css">
+    <title>Галерея изделий</title>
+</head>
+<body>
+
+<ul id="navbar_ul">
+    <li class="navbar"><a href="site.html">Главная</a></li>
+  <li class="navbar"><a href="gallery.html" class="active">Галерея изделий</a></li>
+  <li class="navbar"><a href="price.html">Цены</a></li>
+  <li class="navbar"><a href="form.html">Запись на мастер-классы</a></li>
+  <li class="navbar"><a href="info.html">Контакты</a></li>
+</ul>
+
+<h1 style="text-align: center;">Галерея изделий</h1>
+<div class="gallery">
+      <img src="pics/1.jfif" class="gallery-img" onclick="showImage(src)">
+      <img src="pics/2.jpg" class="gallery-img" onclick="showImage(src)">
+      <img src="pics/3.jpg" class="gallery-img" onclick="showImage(src)">
+      <img src="pics/4.jpg" class="gallery-img" onclick="showImage(src)">
+      <img src="pics/5.jpg" class="gallery-img" onclick="showImage(src)">
+      <img src="pics/6.jfif" class="gallery-img" onclick="showImage(src)">
+      <img src="pics/7.jpg" class="gallery-img" onclick="showImage(src)">
+      <img src="pics/8.jpg" class="gallery-img" onclick="showImage(src)">
+      <img src="pics/9.jpg" class="gallery-img" onclick="showImage(src)">
+      <img src="pics/10.jpg" class="gallery-img" onclick="showImage(src)">
+      <img src="pics/11.jfif" class="gallery-img" onclick="showImage(src)">
+      <img src="pics/12.jpg" class="gallery-img" onclick="showImage(src)">
+      <img src="pics/13.jpg" class="gallery-img" onclick="showImage(src)">
+      <img src="pics/14.webp" class="gallery-img" onclick="showImage(src)">
+      <img src="pics/15.jpg" class="gallery-img" onclick="showImage(src)">
+      <img src="pics/16.jpg" class="gallery-img" onclick="showImage(src)">
+</div>
+
+<div class="image-popup-container" id="imagePopup">
+	<span class="close-button" onclick="closeImage()">×</span>
+	<img src="" alt="Popup Image" id="popupImage">
+</div>
+
+<script src="gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<HTML lang="ru">
+
+  <HEAD>
+    <TITLE>Угадайка</TITLE>
+  </HEAD>
+
+  <BODY bgcolor="#DFD8C5" text="black">
+    <H1>Угадайка</H1>
+    <p>Компьютер загадал случайное число от 1 до 50. Попробуйте его угадать!</p>
+      <form>
+          <input type="number" class="guessField" id="num" name="num" min="1" max="100" required placeholder="введите число">
+          <button type="submit" class="guessSubmit">Угадать</button>
+      </form>
+
+    <div class="resultPar">
+      <p class="guesses"></p>
+      <p class="lastResult"></p>
+      <p class="lowOrHigh"></p>
+    </div>
+    <HR>
+   <SCRIPT language=JavaScript>
+   <!--
+
+   let randomNumber = Math.floor(Math.random() * 50) + 1;
+   console.log(randomNumber)
+   const rez  = document.getElementsByTagName('div');
+   const guesses = document.querySelector('.guesses');
+   const guessSubmit = document.querySelector('.guessSubmit');
+   const guessField = document.querySelector('.guessField');
+   const lastResult = document.querySelector('.lastResult');
+   const lowOrHigh = document.querySelector('.lowOrHigh');
+   let guessCount = 1;
+   let resetButton;
+
+        function checkGuess() {
+        const userGuess = Number(document.getElementById("num").value);
+        if (guessCount === 1) {
+          guesses.textContent = 'Предыдущие догадки: ';
+        }
+
+        if (userGuess >= 1 && userGuess <= 50) {
+        guesses.textContent += userGuess + ' ';
+
+        if (userGuess === randomNumber) {
+          lastResult.textContent = 'Поздравляю! Вы угадали!';
+          lastResult.style.backgroundColor = 'green';
+          lowOrHigh.textContent = '';
+          setGameOver();
+        } else if (guessCount === 5) {
+          lastResult.textContent = 'Игра окончена!';
+          lowOrHigh.textContent = '';
+          setGameOver();
+        } else {
+          if(userGuess < randomNumber) {
+            lowOrHigh.textContent = "Ваше число меньше задуманного!" ;
+          } else if(userGuess > randomNumber) {
+            lowOrHigh.textContent = "Ваше число больше задуманного!";
+          }
+        }
+
+
+        guessCount++;
+        guessField.value = '';
+        guessField.focus();
+       } else {lowOrHigh.textContent = "Ваше число вне диапазона!" ;}
+      }
+
+      guessSubmit.addEventListener('click', checkGuess);
+
+      function setGameOver() {
+        guessField.disabled = true;
+        guessSubmit.disabled = true;
+        resetButton = document.createElement('button');
+        resetButton.textContent = 'Начать новую игру';
+        document.body.appendChild(resetButton);
+        resetButton.addEventListener('click', resetGame);
+      }
+
+      function resetGame() {
+        guessCount = 1;
+        guesses.textContent = '';
+        lastResult.textContent = '';
+        lowOrHigh.textContent = '';
+
+
+        resetButton.parentNode.removeChild(resetButton);
+        guessField.disabled = false;
+        guessSubmit.disabled = false;
+        guessField.value = '';
+        guessField.focus();
+        lastResult.style.backgroundColor = 'white';
+        randomNumber = Math.floor(Math.random() * 100) + 1;
+      }
+    -->
+   </SCRIPT>
+  </BODY>
+
+</HTML>
