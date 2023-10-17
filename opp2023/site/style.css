@@ -1,7 +1,8 @@
+
 body {
     background-color: #EBE3D5;
-    font-family: Verdana, Arial, sans-serif;
-    font-size: 15px;
+    font-family:  Century;
+    font-size: 16px;
     font-color: #0F0E0C;
 }
 #navbar_ul {
@@ -62,8 +63,21 @@ form {
  font-size: inherit;
  margin: 15px;
 }
+
 input {
  padding: 0.2rem 0.5rem;
+ font-family: inherit;
+ font-size: inherit;
+}
+
+select{
+ font-family: inherit;
+ font-size: inherit;
+}
+
+textarea {
+ font-family: inherit;
+ font-size: inherit;
 }
 button {
  margin-left: 30px;
@@ -84,6 +98,8 @@ label {
   display:inline-block;
 }
 legend {
-    font-weight: bold;
+  font-weight: bold;
 }
-
+figcaption {
+ color: #82745E;
+}
